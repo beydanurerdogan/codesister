@@ -1,0 +1,76 @@
+.seller-products {
+  padding: 20px;
+}
+
+.seller-products h2 {
+  color: #7a7fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.seller-products-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+.seller-products-table th,
+.seller-products-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.seller-products-table th {
+  background: linear-gradient(135deg, #a3a8ff, #7a7fff);
+  color: white;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.seller-products-table tbody tr:hover {
+  background: #f0f0ff;
+  transition: background 0.2s ease;
+}
+
+/* İşlem butonları */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.action-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Düzenle */
+.action-buttons .edit-btn {
+  background: #7a7fff;
+  color: white;
+}
+
+.action-buttons .edit-btn:hover {
+  background: #5a5aff;
+  transform: scale(1.05);
+}
+
+/* Sil */
+.action-buttons .delete-btn {
+  background: #ff7a7a;
+  color: white;
+}
+
+.action-buttons .delete-btn:hover {
+  background: #e65c5c;
+  transform: scale(1.05);
+}

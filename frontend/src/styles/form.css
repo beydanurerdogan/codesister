@@ -1,0 +1,292 @@
+/* ===========================
+   GENEL LAYOUT (AuthLayout.jsx)
+   Sol panel: fotoğraf
+   Sağ panel: form
+=========================== */
+.auth-layout {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d0cfff, #cce5ff); /* mor-mavi pastel geçiş */
+}
+
+.auth-left,
+.auth-right {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* Fotoğraf çerçevesi yuvarlak */
+.side-wrap {
+  width: clamp(320px, 45vw, 600px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #a3c9f9, #cbb2f9);
+  padding: 6px;
+  box-shadow: 0 22px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.side-wrap:hover {
+  transform: scale(1.03);
+}
+
+.side-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Oval alternatif */
+.side-wrap-oval {
+  width: clamp(400px, 50vw, 700px);
+  aspect-ratio: 4 / 3;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #a3c9f9, #cbb2f9);
+  padding: 6px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+/* ===========================
+   FORM KARTI (AuthPage.jsx / RegisterPage.jsx)
+=========================== */
+.form-container {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  box-sizing: border-box;
+}
+
+.form-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  color: #444;
+  text-align: center;
+}
+
+/* Form alanları */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f9f9ff;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #a3c9f9;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(163, 201, 249, 0.4);
+  outline: none;
+}
+
+/* Butonlar */
+button {
+  padding: 12px;
+  background: linear-gradient(135deg, #a3c9f9, #cbb2f9);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #7fb3f0, #a68ef9);
+}
+
+/* ===========================
+   ROL SEÇİM BUTONLARI (RegisterPage.jsx)
+=========================== */
+.role-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0 4px;
+  flex-wrap: wrap;
+}
+
+.role-buttons button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #a3c9f9, #cbb2f9);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.role-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   SATICI ŞARTLARI KUTUSU (RegisterPage.jsx)
+=========================== */
+.seller-terms {
+  background: #f9f9ff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.seller-terms ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.seller-terms label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ===========================
+   LİNKLER (AuthPage.jsx / RegisterPage.jsx)
+=========================== */
+.form-link {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #7fb3f0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.form-link:hover {
+  color: #4a90e2;
+  text-decoration: underline;
+}
+
+/* ===========================
+   MODAL (Satıcı şartları popup)
+=========================== */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal h2 {
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.modal ul {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.modal label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* Modal animasyonu */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===========================
+   HATA MESAJI (RegisterPage.jsx)
+=========================== */
+.error-message {
+  margin-top: 10px;
+  color: #d9534f;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ===========================
+   RESPONSIVE AYARLAR
+=========================== */
+@media (max-width: 768px) {
+  .auth-layout {
+    flex-direction: column;
+  }
+
+  .auth-left,
+  .auth-right {
+    width: 100%;
+    padding: max(16px, env(safe-area-inset-top)) 16px;
+  }
+
+  .side-wrap {
+    width: clamp(220px, 65vw, 360px);
+  }
+
+  .side-wrap-oval {
+    width: clamp(260px, 70vw, 420px);
+  }
+
+  .auth-right {
+    align-items: flex-start;
+  }
+
+  .form-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .side-wrap {
+    width: 180px;
+  }
+
+  .form-container {
+    padding: 18px;
+  }
+}

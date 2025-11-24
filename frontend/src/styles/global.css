@@ -1,0 +1,83 @@
+/* Genel responsive ayarlar */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Breakpoints */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-actions {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .form-container {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .product-card {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr; /* tek sütun */
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .form-container input,
+  .form-container button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

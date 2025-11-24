@@ -1,0 +1,61 @@
+.product-edit {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.product-edit h2 {
+  margin-bottom: 20px;
+  color: #7a7fff;
+  text-align: center;
+  font-weight: 600;
+}
+
+.product-edit form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.product-edit label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4a7f;
+}
+
+.product-edit input,
+.product-edit textarea,
+.product-edit select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-edit input:focus,
+.product-edit textarea:focus,
+.product-edit select:focus {
+  border-color: #7a7fff;
+  box-shadow: 0 0 6px rgba(122,127,255,0.3);
+  outline: none;
+}
+
+.product-edit button {
+  background: linear-gradient(135deg, #a3a8ff, #7a7fff);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.product-edit button:hover {
+  background: #5a5aff;
+  transform: translateY(-2px);
+}

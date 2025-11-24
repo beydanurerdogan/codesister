@@ -1,0 +1,77 @@
+/* src/styles/sellerSettings.css */
+.seller-settings {
+  max-width: 520px;
+  margin: 30px auto;
+  padding: 26px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.seller-settings h2 {
+  margin-bottom: 20px;
+  color: #7a7fff;
+  text-align: center;
+  font-weight: 600;
+}
+
+.seller-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.seller-settings-form label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4a7f;
+}
+
+.seller-settings-form input,
+.seller-settings-form textarea,
+.seller-settings-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seller-settings-form input:focus,
+.seller-settings-form textarea:focus,
+.seller-settings-form select:focus {
+  border-color: #7a7fff;
+  box-shadow: 0 0 6px rgba(122,127,255,0.3);
+  outline: none;
+}
+
+.seller-settings-form .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.seller-settings-form button {
+  background: linear-gradient(135deg, #a3a8ff, #7a7fff);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.seller-settings-form button:hover {
+  background: #5a5aff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .seller-settings {
+    width: 92%;
+    padding: 22px;
+  }
+}
